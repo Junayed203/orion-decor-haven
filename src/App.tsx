@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Pages
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
 import CategoriesPage from "./pages/CategoriesPage";
 import CartPage from "./pages/CartPage";
 import ProfilePage from "./pages/ProfilePage";
@@ -24,6 +25,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/profile" element={<ProfilePage />} />

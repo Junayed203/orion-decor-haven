@@ -44,6 +44,11 @@ const HeroBanner = () => {
               src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Modern home decor" 
               className="rounded-lg shadow-xl"
+              onError={(e) => {
+                // Fallback to placeholder if image fails to load
+                const target = e.target as HTMLImageElement;
+                target.src = "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
+              }}
             />
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg border border-orion-border hidden md:block">
               <p className="font-medium text-orion-text">Premium Quality</p>

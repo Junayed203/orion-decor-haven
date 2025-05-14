@@ -54,6 +54,11 @@ export function ProductCard({
             src={image}
             alt={name}
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+            onError={(e) => {
+              // Fallback to a placeholder if the image fails to load
+              const target = e.target as HTMLImageElement;
+              target.src = "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80";
+            }}
           />
           <div className="absolute top-2 left-2">
             <Button
