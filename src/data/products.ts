@@ -1,0 +1,107 @@
+
+export const dummyProducts = [
+  {
+    id: "1",
+    name: "Modern Bedside Lamp",
+    description: "Elegant modern bedside lamp with touch control and multiple brightness levels.",
+    price: 59.99,
+    originalPrice: 79.99,
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Lighting",
+    rating: 4.5,
+    trending: true,
+    new: false,
+    bestSeller: true
+  },
+  {
+    id: "2",
+    name: "RGB Strip Lights",
+    description: "Color changing LED strip lights with remote control. Perfect for living room or bedroom.",
+    price: 29.99,
+    originalPrice: 39.99,
+    image: "https://images.unsplash.com/photo-1611354504140-dedcb8fc6620?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Lighting",
+    rating: 4.8,
+    trending: true,
+    new: true,
+    bestSeller: false
+  },
+  {
+    id: "3",
+    name: "Minimalist Wall Clock",
+    description: "Sleek, silent wall clock with a minimalist design. Battery operated.",
+    price: 34.99,
+    originalPrice: null,
+    image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Wall Decor",
+    rating: 4.2,
+    trending: true,
+    new: false,
+    bestSeller: true
+  },
+  {
+    id: "4",
+    name: "Modern Art Canvas Print",
+    description: "Abstract art canvas print, perfect for adding a pop of color to any room.",
+    price: 89.99,
+    originalPrice: 119.99,
+    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Wall Decor",
+    rating: 4.7,
+    trending: false,
+    new: true,
+    bestSeller: false
+  },
+  {
+    id: "5",
+    name: "Geometric Planter Set",
+    description: "Set of 3 geometric concrete planters in different sizes.",
+    price: 49.99,
+    originalPrice: 69.99,
+    image: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Plants & Planters",
+    rating: 4.4,
+    trending: true,
+    new: false,
+    bestSeller: true
+  },
+  {
+    id: "6",
+    name: "Smart Light Bulbs (Pack of 4)",
+    description: "WiFi enabled smart bulbs that can be controlled with your smartphone or voice assistant.",
+    price: 39.99,
+    originalPrice: 49.99,
+    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Smart Home",
+    rating: 4.6,
+    trending: true,
+    new: true,
+    bestSeller: true
+  },
+  {
+    id: "7",
+    name: "Velvet Throw Pillows",
+    description: "Set of 2 premium velvet throw pillows. Available in multiple colors.",
+    price: 29.99,
+    originalPrice: null,
+    image: "https://images.unsplash.com/photo-1584289530486-5facecb91193?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Textiles",
+    rating: 4.3,
+    trending: false,
+    new: true,
+    bestSeller: false
+  },
+  {
+    id: "8",
+    name: "Floating Wall Shelf",
+    description: "Minimalist floating shelf with hidden mounting bracket. Perfect for displaying decor or books.",
+    price: 24.99,
+    originalPrice: 34.99,
+    image: "https://images.unsplash.com/photo-1531985731165-7b764316dd67?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "Storage",
+    rating: 4.1,
+    trending: true,
+    new: false,
+    bestSeller: true
+  }
+];
