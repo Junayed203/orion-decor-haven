@@ -18,7 +18,7 @@ export const dummyCategories = [
     id: "plants",
     name: "Plants & Planters",
     description: "Bring the outdoors in with decorative plants and planters",
-    image: "https://images.unsplash.com/photo-1466781783364-36c955e42a7d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     count: 15
   },
   {
