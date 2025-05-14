@@ -1,11 +1,11 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Trash2, Plus, Minus, ChevronRight, ShoppingBag } from "lucide-react";
-import { toast } from "sonner";
+import { toast } from "@/components/ui/use-toast";
 
 interface CartItem {
   id: string;
@@ -39,6 +39,7 @@ const CartPage = () => {
   const [cart, setCart] = useState<CartItem[]>(initialCart);
   const [promoCode, setPromoCode] = useState("");
   const [isPromoApplied, setIsPromoApplied] = useState(false);
+  const navigate = useNavigate();
 
   // Calculate subtotal
   const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -64,17 +65,52 @@ const CartPage = () => {
   // Function to remove item from cart
   const removeFromCart = (id: string) => {
     setCart(cart.filter(item => item.id !== id));
-    toast.success("Item removed from cart");
+    toast({
+      title: "Item removed",
+      description: "Item has been removed from your cart."
+    });
   };
 
   // Function to apply promo code
   const applyPromo = () => {
     if (promoCode.toUpperCase() === "ORION10") {
       setIsPromoApplied(true);
-      toast.success("Promo code applied successfully!");
+      toast({
+        title: "Promo code applied",
+        description: "10% discount has been applied to your order.",
+        variant: "default",
+      });
     } else {
-      toast.error("Invalid promo code");
+      toast({
+        title: "Invalid promo code",
+        description: "Please enter a valid promo code.",
+        variant: "destructive",
+      });
     }
+  };
+
+  // Function to handle checkout
+  const handleCheckout = () => {
+    if (cart.length === 0) {
+      toast({
+        title: "Empty cart",
+        description: "Please add items to your cart before checking out.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    // In a real app, we would save the cart data to be retrieved in the checkout page
+    // For now, let's just navigate to the checkout page
+    navigate("/checkout", { 
+      state: { 
+        cart, 
+        subtotal, 
+        discount, 
+        shipping, 
+        total 
+      } 
+    });
   };
 
   return (
@@ -258,7 +294,10 @@ const CartPage = () => {
                     )}
                   </div>
                   
-                  <Button className="w-full bg-orion-text hover:bg-orion-text/90">
+                  <Button 
+                    className="w-full bg-orion-text hover:bg-orion-text/90"
+                    onClick={handleCheckout}
+                  >
                     Checkout
                     <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
